@@ -15,7 +15,7 @@ router.beforeEach((to, from, next) => {
   debugger
   console.log(store.state);
   const userInfo = localStorage.getItem("userInfo");
-  const role = JSON.parse(userInfo).role
+  const role = userInfo ? JSON.parse(userInfo).role : ''
   if (to.meta.roles.includes(role) || to.path === "/login") {
     debugger
     next();

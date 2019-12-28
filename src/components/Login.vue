@@ -130,6 +130,8 @@ export default {
           role: "user"
         });
         this.$router.push("./404");
+      }else{
+        this.$Message.error('邮箱或者密码错误')
       }
     }
   }
